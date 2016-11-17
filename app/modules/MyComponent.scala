@@ -8,8 +8,10 @@ import scala.concurrent.Future
 /**
   * Created by chhaichivon on 11/14/16.
   */
+/*
 trait MyComponent{
   def showMessage(str :String)
+
 }
 
 class MyComponentImpl @Inject() (lifecycle: ApplicationLifecycle ) extends MyComponent{
@@ -22,4 +24,5 @@ class MyComponentImpl @Inject() (lifecycle: ApplicationLifecycle ) extends MyCom
   override def showMessage(str: String): Unit = {
    return str
   }
-}
+
+}*/

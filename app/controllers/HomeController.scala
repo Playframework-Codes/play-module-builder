@@ -2,7 +2,7 @@ package controllers
 
 import javax.inject._
 
-import modules.MyComponent
+import modules.{CustomModules, CustomPaymentExchange}
 import play.api._
 import play.api.mvc._
 
@@ -11,7 +11,7 @@ import play.api.mvc._
  * application's home page.
  */
 @Singleton
-class HomeController @Inject()(myComponent: MyComponent) extends Controller {
+class HomeController @Inject()(customPaymentExchange: CustomPaymentExchange) extends Controller {
 
   /**
    * Create an Action to render an HTML page with a welcome message.
@@ -19,10 +19,15 @@ class HomeController @Inject()(myComponent: MyComponent) extends Controller {
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  val hello = myComponent.showMessage("This is my Module")
+
+   /* val  str = customModules.doShowMessage("Hello I am Module")
+    println(str)*/
+
+
 
   def index = Action {
-    Ok(hello.toString)
+    Ok(views.html.index("Hello World"))
   }
+
 
 }
